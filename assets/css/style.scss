@@ -8,3 +8,111 @@
 @-ms-viewport{
   width: device-width;
 }
+
+/***************************
+
+    #Colour Palette
+
+***************************/
+
+$dark-blue: #000099;
+$light-blue: #0066CC;
+$dark-grey: #333366;
+$light-grey: #868F98;
+$black: #000000;
+$white: #FFFFFF;
+
+
+
+
+
+/***************************
+
+    #Base Styles
+
+***************************/
+
+body {
+    width: 100%;
+    font-family: Helvetica, sans-serif;
+}
+
+header {
+    background-color: $light-blue;
+    width: 100%;
+}
+
+h1, h2, h3, h4, h5,
+h6 {
+    font-family: 'Cabin', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    color: $white;
+}
+
+footer {
+    width: 100%;
+}
+
+/***************************
+
+    #Wrapper Styles
+
+***************************/
+
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+
+
+
+/***************************
+
+    #Table Styles
+
+***************************/
+
+table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+th {
+    text-align: left;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.data-title {
+    text-align: center;
+    background: #F3F3F3;
+    padding: 50px 0;
+}
+
+.data-title td {
+    padding: 10px 0;
+}
+
+.data-content p {
+    text-align: left;
+    margin: 0;
+}
+
+/***************************
+
+    #Helper Classes
+
+***************************/
+
+.hide {
+    display: none;
+}

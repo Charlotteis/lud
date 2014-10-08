@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <link href='http://fonts.googleapis.com/css?family=Cabin:500' rel='stylesheet' type='text/css'>
         <meta charset="utf-8">
         <!-- Title block allowing child pages to override -->
         <title>London Underground Diary</title>
@@ -18,12 +19,19 @@
         {% block styles %}{% endblock %}
 
     <body>
-        <div id="wrapper">
+        <!-- Site Wide Header -->
+        {% include "header" %}
+
+        <!-- Main Content Wrapper -->
+        <div class="wrapper">
 
             <!-- Content block, child page inject content -->
             {% block content %}{% endblock %}
         </div>
 
-        {{ "main.min.js" | asset_url | script_tag }}
+        {% include "footer" %}
+
+
+        {{ "main.js" | asset_url | script_tag }}
     </body>
 </html>
