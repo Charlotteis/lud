@@ -1,0 +1,8 @@
+/***************************
+
+    #MISC (Awkward stuff that has no home)
+
+***************************/
+/* This is to set the responsive scaling for devices using IE10 */
+@-ms-viewport {
+  width: device-width; }

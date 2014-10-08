@@ -1,23 +1,29 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <!-- Title block allowing child pages to override -->
-        <title>{% block title %}Empty{% endblock %}</title>
-        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <title>London Underground Diary</title>
+
+        <meta name="author" content="Charlotte Spencer">
+        <meta name="description" content="An online diary for London Underground duties and notes">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" type="image/ico" href="{{ "/favicon.ico" | root_asset }}" />
+
         <!-- Styles -->
-        {{ "app.css" | asset_url | stylesheet_tag }}
-        <!-- Style block allowing child pages to inject their own styles -->
+        {{ "css/normalize.min.css" | asset_url | stylesheet_tag }}
+        {{ "css/style.min.css" | asset_url | stylesheet_tag }}
+        <!-- Style Block allowing child pages to inject their own styles -->
         {% block styles %}{% endblock %}
-    </head>
+
     <body>
         <div id="wrapper">
-            <!-- Include -->
-            {% include "header" %}
+
             <!-- Content block, child page inject content -->
             {% block content %}{% endblock %}
         </div>
-        <!-- Script block allowing child pages to inject their own scripts -->
-        {% block scripts %}{% endblock %}
-        {{ "app.js" | asset_url | script_tag }}
+
+        {{ "main.min.js" | asset_url | script_tag }}
     </body>
 </html>
