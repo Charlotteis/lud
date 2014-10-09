@@ -79,5 +79,5 @@ th {
     #Helper Classes
 
 ***************************/
-.hide {
-  display: none; }
+*:focus {
+  background-color: orange; }

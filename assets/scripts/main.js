@@ -28,7 +28,7 @@ function toggleParagraph(event) {
         elementToShow.style.visibility = "hidden";
     } else {
         elementToShow.style.display = "table-row";
-        elementToShow.style.visibility = "visible";
+        elementToShow.style.visibility = "visible"; aaaa
     }
 }
 
