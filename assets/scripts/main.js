@@ -6,8 +6,7 @@ var dataContent = document.getElementsByClassName("data-content");
 // Loops over an array of elements (most likely a classList) and hides them
 function hideElements(elements) {
     for (var i = 0; i < elements.length; i++ ) {
-        elements[i].style.display = "none";
-        elements[i].style.visibility = "hidden";
+        elements[i].setAttribute("aria-expanded", false)
     }
 }
 
@@ -18,17 +17,18 @@ function addHandlerToArray(elements, fnc, handler) {
     }
 }
 
-// When you click each data-entry, reveal the corresponding data-content or hide if already showing
+// When you click each data-entry, reveal the corresponding data-content or hide if already showing.
 function toggleParagraph(event) {
     // Using event allows you to ge the dom element from the context of the click!
 
     var elementToShow = event.srcElement.parentNode.nextElementSibling;
-    if (elementToShow.style.display === "table-row") {
-        elementToShow.style.display = "none";
-        elementToShow.style.visibility = "hidden";
-    } else {
-        elementToShow.style.display = "table-row";
-        elementToShow.style.visibility = "visible"; aaaa
+    if (elementToShow.getAttribute("aria-expanded") === "true") {
+
+        elementToShow.setAttribute("aria-expanded", false);
+
+    } else if (elementToShow.getAttribute("aria-expanded") === "false") {
+
+        elementToShow.setAttribute("aria-expanded", true);
     }
 }
 

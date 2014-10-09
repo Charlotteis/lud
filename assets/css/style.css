@@ -81,3 +81,9 @@ th {
 ***************************/
 *:focus {
   background-color: orange; }
+
+tr[aria-expanded=true] {
+  display: table-row; }
+
+tr[aria-expanded=false] {
+  display: none; }

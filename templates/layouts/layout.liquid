@@ -32,11 +32,11 @@
         {% include "footer" %}
 
 
-        {{ "main.js" | asset_url | script_tag }}
+        <!-- {{ "main.js" | asset_url | script_tag }} -->
 
         <!-- TODO: Remove jQuery Implentation snippet from production code -->
         <!-- jQuery Implementation -->
-        <!-- {{ "jquery-1.11.1.min.js" | asset_url | script_tag }}
-        {{ "jqueryimplementation.minjs" | asset_url | script_tag }} -->
+        {{ "jquery-1.11.1.min.js" | asset_url | script_tag }}
+        {{ "jqueryimplementation.min.js" | asset_url | script_tag }}
     </body>
 </html>
