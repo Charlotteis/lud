@@ -22,5 +22,5 @@
   "templateDirectory": "templates",
   "type": "mixture",
   "useCompass": false,
-  "remoteDebugPort": 8081
+  "remoteDebugPort": null
 }
