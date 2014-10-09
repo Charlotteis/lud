@@ -79,9 +79,6 @@ th {
     #Helper Classes
 
 ***************************/
-*:focus {
-  background-color: orange; }
-
 tr[aria-expanded=true] {
   display: table-row; }
 

@@ -3,13 +3,6 @@ var dataTitles = document.getElementsByClassName("data-title");
 // Grab all the paragraphs accompanying each data entry
 var dataContent = document.getElementsByClassName("data-content");
 
-// Loops over an array of elements (most likely a classList) and hides them
-function hideElements(elements) {
-    for (var i = 0; i < elements.length; i++ ) {
-        elements[i].setAttribute("aria-expanded", false)
-    }
-}
-
 // Loops over an array of elements and adds an event handler
 function addHandlerToArray(elements, fnc, handler) {
     for (var i = 0; i < elements.length; i++){
@@ -21,6 +14,7 @@ function addHandlerToArray(elements, fnc, handler) {
 function toggleParagraph(event) {
     // Using event allows you to ge the dom element from the context of the click!
 
+    // Here we are setting aria-expanded to true/false. This interacts with the tr[aria-expanded=true] && tr[aria-expanded=false] CSS properties to hide or show the element.
     var elementToShow = event.srcElement.parentNode.nextElementSibling;
     if (elementToShow.getAttribute("aria-expanded") === "true") {
 
@@ -32,7 +26,5 @@ function toggleParagraph(event) {
     }
 }
 
-// On page load, hide the paragraph under each data entry
-hideElements(dataContent);
 // Add the "click" event to all data-titles, firing the toggleParagraph function
 addHandlerToArray(dataTitles, toggleParagraph, "click");
